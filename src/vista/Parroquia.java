@@ -30,7 +30,7 @@ public class Parroquia extends javax.swing.JFrame {
         regFeligresPanel = new javax.swing.JPanel();
         titleLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        rfCedulaTextField = new javax.swing.JTextField();
+        cedulaTextField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         nombreTextField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -118,7 +118,7 @@ public class Parroquia extends javax.swing.JFrame {
                             .addGroup(regFeligresPanelLayout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(rfCedulaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cedulaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, regFeligresPanelLayout.createSequentialGroup()
                                 .addGroup(regFeligresPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
@@ -158,7 +158,7 @@ public class Parroquia extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addGroup(regFeligresPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(rfCedulaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cedulaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(regFeligresPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -322,48 +322,18 @@ public class Parroquia extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Parroquia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Parroquia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Parroquia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Parroquia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Parroquia().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton actualizarButton;
-    private javax.swing.JButton buscarButton;
+    public javax.swing.JButton actualizarButton;
+    public javax.swing.JButton buscarButton;
+    public javax.swing.JTextField cedulaTextField;
     private javax.swing.JTextField consultaDiezmoTextField;
     private javax.swing.JButton consultarButton;
-    private javax.swing.JTextField direccionTextField;
-    private javax.swing.JButton eliminarButton;
-    private javax.swing.JTextField estadoTextField;
-    private javax.swing.JTextField etratoTextField;
-    private javax.swing.JButton guardarButton;
+    public javax.swing.JTextField direccionTextField;
+    public javax.swing.JButton eliminarButton;
+    public javax.swing.JTextField estadoTextField;
+    public javax.swing.JTextField etratoTextField;
+    public javax.swing.JButton guardarButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -374,15 +344,14 @@ public class Parroquia extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField nombreTextField;
+    public javax.swing.JTextField nombreTextField;
     private javax.swing.JButton pagarButton;
     private javax.swing.JTextField rdCedulaTextField;
     private javax.swing.JPanel regDiezmoPanel;
     private javax.swing.JPanel regFeligresPanel;
     private javax.swing.JPanel resultadosPanel;
-    private javax.swing.JTextField rfCedulaTextField;
     private java.awt.ScrollPane scrollPane1;
-    private javax.swing.JTextField telefonoTextField;
+    public javax.swing.JTextField telefonoTextField;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JButton totalizarButton;
     // End of variables declaration//GEN-END:variables
