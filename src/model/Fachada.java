@@ -46,4 +46,15 @@ public class Fachada {
             }
         }
     }
+    
+    public Feligres consultarFeligres(String cedula){
+        Feligres r = null;
+        for (int i = 0; i<feligreses.size(); i++){
+            if (feligreses.get(i).getCedula().equals(cedula)){
+                r = feligreses.get(i);
+                break;
+            }
+        }
+        return r;
+    }
 }

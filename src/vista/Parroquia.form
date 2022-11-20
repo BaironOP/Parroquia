@@ -293,7 +293,7 @@
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="rdCedulaTextField" max="32767" attributes="0"/>
+                      <Component id="consultaDCedulaTextField" max="32767" attributes="0"/>
                       <Component id="consultaDiezmoTextField" pref="140" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
@@ -327,7 +327,7 @@
                   <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="rdCedulaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="consultaDCedulaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -360,7 +360,10 @@
             <Property name="text" type="java.lang.String" value="Cedula*"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="rdCedulaTextField">
+        <Component class="javax.swing.JTextField" name="consultaDCedulaTextField">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
@@ -368,16 +371,28 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="consultaDiezmoTextField">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="consultarButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Consultar"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="pagarButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="Pagar"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="totalizarButton">
           <Properties>

@@ -48,7 +48,7 @@ public class Parroquia extends javax.swing.JFrame {
         regDiezmoPanel = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        rdCedulaTextField = new javax.swing.JTextField();
+        consultaDCedulaTextField = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         consultaDiezmoTextField = new javax.swing.JTextField();
         consultarButton = new javax.swing.JButton();
@@ -199,6 +199,8 @@ public class Parroquia extends javax.swing.JFrame {
 
         jLabel9.setText("Valor Diezmo");
 
+        consultaDiezmoTextField.setEditable(false);
+
         consultarButton.setText("Consultar");
 
         pagarButton.setText("Pagar");
@@ -216,7 +218,7 @@ public class Parroquia extends javax.swing.JFrame {
                     .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(regDiezmoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(rdCedulaTextField)
+                    .addComponent(consultaDCedulaTextField)
                     .addComponent(consultaDiezmoTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
                 .addGap(23, 23, 23))
             .addGroup(regDiezmoPanelLayout.createSequentialGroup()
@@ -242,7 +244,7 @@ public class Parroquia extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addGroup(regDiezmoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(rdCedulaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(consultaDCedulaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(regDiezmoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
@@ -327,8 +329,9 @@ public class Parroquia extends javax.swing.JFrame {
     public javax.swing.JButton actualizarButton;
     public javax.swing.JButton buscarButton;
     public javax.swing.JTextField cedulaTextField;
-    private javax.swing.JTextField consultaDiezmoTextField;
-    private javax.swing.JButton consultarButton;
+    public javax.swing.JTextField consultaDCedulaTextField;
+    public javax.swing.JTextField consultaDiezmoTextField;
+    public javax.swing.JButton consultarButton;
     public javax.swing.JTextField direccionTextField;
     public javax.swing.JButton eliminarButton;
     public javax.swing.JTextField estadoTextField;
@@ -345,8 +348,7 @@ public class Parroquia extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     public javax.swing.JTextField nombreTextField;
-    private javax.swing.JButton pagarButton;
-    private javax.swing.JTextField rdCedulaTextField;
+    public javax.swing.JButton pagarButton;
     private javax.swing.JPanel regDiezmoPanel;
     private javax.swing.JPanel regFeligresPanel;
     private javax.swing.JPanel resultadosPanel;

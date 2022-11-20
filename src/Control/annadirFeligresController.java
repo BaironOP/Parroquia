@@ -19,12 +19,10 @@ import vista.Parroquia;
 public class annadirFeligresController implements ActionListener{
     
     private Parroquia p = null;
-    private Feligres f = null;
     private Fachada fachada = null;
 
-    public annadirFeligresController(Parroquia parroquia, Feligres feligres, Fachada fachada) {
+    public annadirFeligresController(Parroquia parroquia, Fachada fachada) {
         super();
-        this.f = feligres;
         this.p = parroquia;
         this.fachada = fachada;
         actionListener(this);
@@ -37,6 +35,7 @@ public class annadirFeligresController implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent event) {
         try{
+            Feligres f = null;
             if (event.getActionCommand().contentEquals("Guardar")){
                 f.setCedula(this.p.cedulaTextField.getText());
                 f.setDireccion(this.p.direccionTextField.getText());
