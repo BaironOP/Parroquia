@@ -57,4 +57,15 @@ public class Fachada {
         }
         return r;
     }
+    
+    public void pagar (String cedula){
+        Feligres r = null;
+        for (int i = 0; i<feligreses.size(); i++){
+            if (feligreses.get(i).getCedula().equals(cedula)){
+                r = feligreses.get(i);
+                r.setEstado(Estado.Cumplido);
+                break;
+            }
+        }
+    }
 }

@@ -56,7 +56,8 @@ public class Parroquia extends javax.swing.JFrame {
         totalizarButton = new javax.swing.JButton();
         resultadosPanel = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        scrollPane1 = new java.awt.ScrollPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        cuadroResultado = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -115,10 +116,6 @@ public class Parroquia extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, regFeligresPanelLayout.createSequentialGroup()
                         .addGroup(regFeligresPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(regFeligresPanelLayout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cedulaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, regFeligresPanelLayout.createSequentialGroup()
                                 .addGroup(regFeligresPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
@@ -130,24 +127,30 @@ public class Parroquia extends javax.swing.JFrame {
                                         .addGap(57, 57, 57)
                                         .addComponent(guardarButton)))
                                 .addGroup(regFeligresPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(regFeligresPanelLayout.createSequentialGroup()
-                                        .addGap(26, 26, 26)
-                                        .addComponent(eliminarButton)
-                                        .addGap(0, 87, Short.MAX_VALUE))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, regFeligresPanelLayout.createSequentialGroup()
                                         .addGap(19, 19, 19)
                                         .addGroup(regFeligresPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(etratoTextField, javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(telefonoTextField, javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(direccionTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(nombreTextField)
-                                            .addComponent(estadoTextField)))))
+                                            .addComponent(estadoTextField)
+                                            .addComponent(nombreTextField, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, regFeligresPanelLayout.createSequentialGroup()
+                                        .addGap(26, 26, 26)
+                                        .addGroup(regFeligresPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(regFeligresPanelLayout.createSequentialGroup()
+                                                .addGap(6, 6, 6)
+                                                .addComponent(buscarButton))
+                                            .addComponent(eliminarButton))
+                                        .addGap(0, 86, Short.MAX_VALUE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, regFeligresPanelLayout.createSequentialGroup()
                                 .addGap(57, 57, 57)
                                 .addComponent(actualizarButton)
-                                .addGap(18, 18, 18)
-                                .addComponent(buscarButton)
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, regFeligresPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(108, 108, 108)
+                                .addComponent(cedulaTextField)))
                         .addGap(15, 15, 15))))
         );
         regFeligresPanelLayout.setVerticalGroup(
@@ -179,7 +182,7 @@ public class Parroquia extends javax.swing.JFrame {
                 .addGroup(regFeligresPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(estadoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(regFeligresPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(guardarButton)
                     .addComponent(eliminarButton))
@@ -234,7 +237,7 @@ public class Parroquia extends javax.swing.JFrame {
                     .addGroup(regDiezmoPanelLayout.createSequentialGroup()
                         .addGap(102, 102, 102)
                         .addComponent(totalizarButton)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
         regDiezmoPanelLayout.setVerticalGroup(
             regDiezmoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,6 +266,11 @@ public class Parroquia extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel10.setText("Resultados");
 
+        cuadroResultado.setEditable(false);
+        cuadroResultado.setColumns(20);
+        cuadroResultado.setRows(5);
+        jScrollPane1.setViewportView(cuadroResultado);
+
         javax.swing.GroupLayout resultadosPanelLayout = new javax.swing.GroupLayout(resultadosPanel);
         resultadosPanel.setLayout(resultadosPanelLayout);
         resultadosPanelLayout.setHorizontalGroup(
@@ -270,10 +278,10 @@ public class Parroquia extends javax.swing.JFrame {
             .addGroup(resultadosPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(resultadosPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
                     .addGroup(resultadosPanelLayout.createSequentialGroup()
                         .addComponent(jLabel10)
-                        .addGap(0, 209, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         resultadosPanelLayout.setVerticalGroup(
@@ -282,7 +290,7 @@ public class Parroquia extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1)
                 .addContainerGap())
         );
 
@@ -332,6 +340,7 @@ public class Parroquia extends javax.swing.JFrame {
     public javax.swing.JTextField consultaDCedulaTextField;
     public javax.swing.JTextField consultaDiezmoTextField;
     public javax.swing.JButton consultarButton;
+    public javax.swing.JTextArea cuadroResultado;
     public javax.swing.JTextField direccionTextField;
     public javax.swing.JButton eliminarButton;
     public javax.swing.JTextField estadoTextField;
@@ -347,12 +356,12 @@ public class Parroquia extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JTextField nombreTextField;
     public javax.swing.JButton pagarButton;
     private javax.swing.JPanel regDiezmoPanel;
     private javax.swing.JPanel regFeligresPanel;
     private javax.swing.JPanel resultadosPanel;
-    private java.awt.ScrollPane scrollPane1;
     public javax.swing.JTextField telefonoTextField;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JButton totalizarButton;

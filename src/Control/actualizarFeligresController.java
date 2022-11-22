@@ -42,6 +42,7 @@ public class actualizarFeligresController implements ActionListener {
                 }
                 fachada.actualizarFeligres(p.cedulaTextField.getText(), p.nombreTextField.getText(), p.direccionTextField.getText(), p.telefonoTextField.getText(), Integer.parseInt(p.etratoTextField.getText()), e);
             }
+            p.cuadroResultado.append("Feligres actualizado"+"\n");
         }catch(Exception e){
             e.printStackTrace();
         }

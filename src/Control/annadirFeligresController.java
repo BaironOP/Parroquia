@@ -54,6 +54,7 @@ public class annadirFeligresController implements ActionListener{
                 }
                 this.p.estadoTextField.setText("");
                 fachada.añadirFeligres(f);
+                this.p.cuadroResultado.append("Feligres añadido"+"\n");
             }
         }catch(Exception e){
             e.printStackTrace();

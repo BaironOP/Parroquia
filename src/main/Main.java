@@ -23,6 +23,8 @@ public class Main {
         annadirFeligresController annadirF = new annadirFeligresController (parroquia, fachada);
         consultarFeligresController consultarF = new consultarFeligresController (parroquia, fachada);
         eliminarFeligresController eliminarF = new eliminarFeligresController (parroquia, fachada);
+        buscarFeligresController buscarF = new buscarFeligresController (parroquia, fachada);
+        pagarDiezmoController pagarD = new pagarDiezmoController (parroquia, fachada);
         parroquia.setVisible(true);
         
     }
