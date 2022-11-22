@@ -35,9 +35,9 @@ public class actualizarFeligresController implements ActionListener {
         try{
             int e = -1;
             if (event.getActionCommand().contentEquals("Actualizar")){
-                if (p.estadoTextField.equals("Deudor")||p.estadoTextField.equals("deudor")){
+                if (p.estadoTextField.getText().equals("Deudor")||p.estadoTextField.getText().equals("deudor")){
                     e=0;
-                }else if (p.estadoTextField.equals("Cumplido")||p.estadoTextField.equals("cumplido")){
+                }else if (p.estadoTextField.getText().equals("Cumplido")||p.estadoTextField.getText().equals("cumplido")){
                     e=1;
                 }
                 fachada.actualizarFeligres(p.cedulaTextField.getText(), p.nombreTextField.getText(), p.direccionTextField.getText(), p.telefonoTextField.getText(), Integer.parseInt(p.etratoTextField.getText()), e);

@@ -35,18 +35,24 @@ public class annadirFeligresController implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent event) {
         try{
-            Feligres f = null;
+            Feligres f = new Feligres();
             if (event.getActionCommand().contentEquals("Guardar")){
-                f.setCedula(this.p.cedulaTextField.getText());
-                f.setDireccion(this.p.direccionTextField.getText());
-                f.setEstrato(Integer.parseInt(this.p.etratoTextField.getText()));
-                f.setNombre(this.p.nombreTextField.getText());
-                f.setTelefono(this.p.telefonoTextField.getText());
-                if (this.p.estadoTextField.getText().equals("Deudor")||this.p.estadoTextField.getText().equals("deudor")){
+                f.setCedula(p.cedulaTextField.getText());
+                this.p.cedulaTextField.setText("");
+                f.setDireccion(p.direccionTextField.getText());
+                this.p.direccionTextField.setText("");
+                f.setEstrato(Integer.parseInt(p.etratoTextField.getText()));
+                this.p.etratoTextField.setText("");
+                f.setNombre(p.nombreTextField.getText());
+                this.p.nombreTextField.setText("");
+                f.setTelefono(p.telefonoTextField.getText());
+                this.p.telefonoTextField.setText("");
+                if (p.estadoTextField.getText().equals("Deudor")||p.estadoTextField.getText().equals("deudor")){
                     f.setEstado(Estado.Deudor);
-                }else if (this.p.estadoTextField.getText().equals("Cumplido")||this.p.estadoTextField.getText().equals("cumplido")){
+                }else if (p.estadoTextField.getText().equals("Cumplido")||p.estadoTextField.getText().equals("cumplido")){
                     f.setEstado(Estado.Cumplido);
                 }
+                this.p.estadoTextField.setText("");
                 fachada.añadirFeligres(f);
             }
         }catch(Exception e){

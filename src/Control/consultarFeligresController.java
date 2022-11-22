@@ -28,7 +28,7 @@ public class consultarFeligresController implements ActionListener{
     }
     
     public void actionListener (ActionListener control){
-        p.actualizarButton.addActionListener(control);
+        p.consultarButton.addActionListener(control);
     }
 
     @Override
