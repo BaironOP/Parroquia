@@ -19,12 +19,8 @@ public class Main {
         
         Parroquia parroquia = new Parroquia();
         Fachada fachada = new Fachada();
-        actualizarFeligresController actualizarF = new actualizarFeligresController(parroquia, fachada);
-        annadirFeligresController annadirF = new annadirFeligresController (parroquia, fachada);
-        consultarFeligresController consultarF = new consultarFeligresController (parroquia, fachada);
-        eliminarFeligresController eliminarF = new eliminarFeligresController (parroquia, fachada);
-        buscarFeligresController buscarF = new buscarFeligresController (parroquia, fachada);
-        pagarDiezmoController pagarD = new pagarDiezmoController (parroquia, fachada);
+        registroFeligresController regF = new registroFeligresController(parroquia, fachada);
+        registroDiezmoController regD = new registroDiezmoController (parroquia, fachada);
         parroquia.setVisible(true);
         
     }

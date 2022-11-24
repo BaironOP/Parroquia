@@ -8,18 +8,19 @@ package Control;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import model.Fachada;
+import model.Feligres;
 import vista.Parroquia;
 
 /**
  *
  * @author Usuario
  */
-public class actualizarFeligresController implements ActionListener {
+public class registroDiezmoController implements ActionListener{
     
     private Parroquia p = null;
     private Fachada fachada = null;
 
-    public actualizarFeligresController(Parroquia parroquia, Fachada fachada) {
+    public registroDiezmoController(Parroquia parroquia, Fachada fachada) {
         super();
         this.p = parroquia;
         this.fachada = fachada;
@@ -27,25 +28,28 @@ public class actualizarFeligresController implements ActionListener {
     }
     
     public void actionListener (ActionListener control){
-        p.actualizarButton.addActionListener(control);
+        p.pagarButton.addActionListener(control);
+        p.consultarButton.addActionListener(control);
     }
 
     @Override
     public void actionPerformed(ActionEvent event) {
         try{
-            int e = -1;
-            if (event.getActionCommand().contentEquals("Actualizar")){
+            if (event.getActionCommand().contentEquals("Pagar")){
+                int e=0;
                 if (p.estadoTextField.getText().equals("Deudor")||p.estadoTextField.getText().equals("deudor")){
                     e=0;
                 }else if (p.estadoTextField.getText().equals("Cumplido")||p.estadoTextField.getText().equals("cumplido")){
                     e=1;
                 }
                 fachada.actualizarFeligres(p.cedulaTextField.getText(), p.nombreTextField.getText(), p.direccionTextField.getText(), p.telefonoTextField.getText(), Integer.parseInt(p.etratoTextField.getText()), e);
+                p.cuadroResultado.append("Feligres actualizado"+"\n");
+            }else if (event.getActionCommand().contentEquals("Consultar")){
+                Feligres f = fachada.consultarFeligres(p.consultaDCedulaTextField.getText());
+                p.consultaDiezmoTextField.setText(f.getDiezmo()+"");
             }
-            p.cuadroResultado.append("Feligres actualizado"+"\n");
         }catch(Exception e){
             e.printStackTrace();
         }
     }
-    
 }
